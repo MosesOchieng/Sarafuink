@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/typicons/2.0.9/typicons.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body id="particles-js"></body>
+<div class="animated bounceInDown">
+  <div class="container">
+    <span class="error animated tada" id="msg"></span>
+    <form name="form1" class="box" onsubmit="return checkStuff()" action=" ../Dashboard/index.html">
+      <h4>Sarafu<span> Wallet</span></h4>
+      <h5>Sign in to your account.</h5>
+      <label for="wallet-address">Enter your Polkadot wallet address:</label>
+<input type="text" id="wallet-address" name="wallet-address" required>
+
+        <input type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off">
+
+        <br>
+        <br>
+      <button type="submit" onclick="login()" class="btn1">Login</button>
+      </form>
+        <a href=" ../logup/index.html" class="dnthave">Don’t have an account? Sign up</a>
+  </div>
+       <div class="footer">
+
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@polkadot/api@4.13.1/build/bundle.js"></script>
+
+<!-- partial -->
+  <script src='https://cldup.com/S6Ptkwu_qA.js'></script><script  src="./script.js"></script>
+<script>
+async function login() {
+  const api = await polkadotApi();
+  const walletAddress = document.getElementById("wallet-address").value;
+
+  try {
+    const isValidAddress = api.createType('Address', walletAddress);
+    // If the above line of code runs without error, then the address is valid
+    // TODO: Add code to redirect the user to the main page of your dApp
+    window.location.href = " ../Dashboard/index.html";
+  } catch (error) {
+    console.error('Invalid address');
+  }
+}
+async function polkadotApi() {
+  const provider = new api.WsProvider('wss://rpc.polkadot.io');
+  const api = await api.ApiPromise.create({ provider });
+  return api;
+}
+
+</script>
+</body>
+</html>
