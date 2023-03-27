@@ -36,7 +36,7 @@ Contributing
 
 We welcome contributions from anyone interested in improving Sarafu. To contribute, please follow these steps:
 
-    Fork the repository: https://github.com/your-username/sarafu.git
+    Fork the repository: https://github.com/MosesOchieng/Sarafuink.git
     Create a new branch: git checkout -b my-branch
     Make your changes and commit them: git commit -m "My changes"
     Push your changes to your forked repository: git push origin my-branch
