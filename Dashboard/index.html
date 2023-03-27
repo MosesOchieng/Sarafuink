@@ -2,459 +2,330 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard.</title>
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Nunito:300,400,700'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'><link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title> DashBoard</title>
-	<!-- FAVIICON -->
-	<link rel="shortcut icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<!-- Le fav and touch icons -->
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png" />
-	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png" />
-	<link rel="icon" type="images/svg+xml" href="images/logo.svg" />
-	<!-- FONT-FAMILY -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
-	<link href="css/custom-admin.css" rel="stylesheet">
-	 <!-- FONT-FAMILY -->
-	<!-- FONT-AWESOME-4.7.0 -->
-	<link href="css/font-awesome-admin.css" rel="stylesheet">
-	<!-- CORE CSS -->
-	<link href="css/bootstrap-admin.css" rel="stylesheet">
-	<link href="css/export-chart-admin.css" rel="stylesheet">
-	<link href="css/custom-admin.css" rel="stylesheet">
-</head>
+<div class="container">
+  
+  <aside class="sidebar">
+    
+    <img src=" ../about/wallet.png" alt="Logo" class="sidebar__logo" />
+    
+    <div class="menu">
+      <span>Sarafu </span>
+      <i class="material-icons">expand_more</i>
+    </div>
+    <br>
+    <br>
+   
+    <h4 class="heading-4">Services</h4>
+    <ul class="navigation">
+      
+      <li class="navigation__item">
+        
+        <a href=" ../family/index.html" class="navigation__link">
+          <i class="material-icons navigation__icon">group</i>
+          <span>Sarafu Share</span>
+        </a>
+        
+      </li>
+      
+      <li class="navigation__item">
+        
+        <a href=" ../transactions/index.html" class="navigation__link">
+          <i class="material-icons navigation__icon">person</i>
+          <span>Sarafu Wallet</span>
+        </a>
+        
+      </li>
+      <li class="navigation__item">
+      
+        <a href=" ../transactions/index.html" class="navigation__link">
+          <i class="material-icons navigation__icon">group</i>
+          <span>Sarafu Go</span>
+        </a>
+      
+      </li>
+      <li class="navigation__item">
+      
+        <a href=" ../transactions/index.html" class="navigation__link">
+          <i class="material-icons navigation__icon">group</i>
+          <span>Sarafu Pro.</span>
+        </a>
+      
+      </li>
+      <li class="navigation__item">
+      
+        <a href=" ../transactions/index.html" class="navigation__link">
+          <i class="material-icons navigation__icon">group</i>
+          <span>Sarafu Fam</span>
+        </a>
+      
+      </li>
+      <li class="navigation__item">
+      
+        <a href=" ../bank/index.html" class="navigation__link">
+          <i class="material-icons navigation__icon">group</i>
+          <span>Sarafu Eve.</span>
+        </a>
+      
+      </li>
+    </ul>
+    
+    
+    <h4 class="heading-4">Rent</h4>
+    <ul class="navigation">
+      
+      <li class="navigation__item navigation__item--active">
+        
+        <a href="pay/mpesa.html" class="navigation__link">
+          <i class="material-icons navigation__icon">attach_money</i>
+          <span>Deposit</span>
+        </a>
+        
+      </li>
+      
+      <li class="navigation__item">
+        
+        <a href="#" class="navigation__link">
+          <i class="material-icons navigation__icon">attach_money</i>
+          <span>Withdraw</span>
+        </a>
+        
+      </li>
+      
+      <li class="navigation__item">
+        
+        <a href="lipa/mpesa.html" class="navigation__link">
+          <i class="material-icons navigation__icon">attach_money</i>
+          <span>Transact</span>
+        </a>
+        
+      </li>
+      
+    </ul>
+    
+  </aside>
+  
+  <header class="header">
+    
+    <nav class="user-nav">
+      <div class="user-nav__icon-box">
+        <i class="material-icons user-nav__icon">search</i>
+      </div>
+      <div class="user-nav__icon-box">
+        <i class="material-icons user-nav__icon">notifications</i>
+        <span class="user-nav__notification">99</span>
+      </div>
+      <div class="user-nav__icon-box">
+        <i class="material-icons user-nav__icon">settings</i>
+      </div>
+      <div class="user-nav__user">
+        <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" alt="User photo" class="user-nav__user-photo">
+      </div>
+    </nav>
+    
+  </header>
+  
+  <main class="main">
+    
+    <header class="main__header">
+      
+      <h1 class="heading-1">
+        <i class="material-icons heading-1__icon">group</i>
+        <span>Welcome to Sarafu</span>
+      </h1>
 
-<body class="blur-theme data-container-body">
-	<div id="projectmaster" class="content">
-
-		<!-- HEADER: START -->
-		<header>
-		<div class="navbar navbar-default">
-				<div class="container-fluid">
-					<div class="clearfix">
-						<div class="navbar-left">
-							<h1 class="h4 clearfix navbar-logo">
-							<a href="userdashboard.html" title="Shriram">
-								<img src="images/logo.png" class="img-responsive">
-							</a>
-							</h1>
-							<div class="navbar-box">
-								<div class="icon-box-1">
-									<span></span>
-									<span></span>
-									<span></span>
-								</div>
-								<div class="icon-box-2">	<i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
-								</div>
-							</div>
-						</div>
-						<div class="navbar-right navbar-collapse-bar">
-							<ul class="nav navbar-nav">
-								<li>
-									<a href="userdashboard.html" title="home">	<i class="fa fa-home fa-fw fa-lg" aria-hidden="true"></i>
-										<span class="badge bg-c-blue">5</span>
-									</a>
-								</li>
-								<li>
-									<a href="#" title="Welcome Admin">	<i class="fa fa-user-o fa-fw"></i>
-										<span class="badge">5</span>
-									</a>
-								</li>
-								<li>
-									<a href="login.html" title="Log out">	<i class="fa fa-sign-in fa-fw fa-lg"></i>
-										<span class="badge bg-c-green">5</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="menu-list-mobile-collapse">
-						<span class="span1"></span>
-						<span></span>
-						<span class="span2"></span>
-					</div>
-				</div>
-			</div>
-			<div class="navbar-menu-list  navbar-menu-list-collapse-menu" id="">
-			  <div class="">
-                <div class="">
-					<ul class="list-unstyled clearfix">
-					<li class="icon-delete" data-toggle="collapse" data-target="#demo1">
-						<a href="userdashboard.html" title="">
-							<div class="clearfix">
-								<div class="pull-left">	<i class="fa fa-tachometer fa-fw" aria-hidden="true"></i>
-									<span>user dashboard</span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li class="href-master" data-toggle="collapse" data-target="#demo2">
-						<a href="#" title="" class="">
-							<div class="clearfix">
-								<div class="pull-left">	<i class="fa fa-user-o fa-fw"></i>
-									<span>Sarafu Fam.</span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-						<ul id="demo2" class="ui-dropdownmenu-list list-unstyled clearfix collapse">
-							<li>
-								<a href="usermaster.html">  Budget</a>
-							</li>
-							<li>
-								<a href="#">Transaction request</a>
-							</li>
-							<li>
-								<a href="#">Sarafu plan</a>
-							</li>
-						</ul>
-					</li>
-					<li class="active icon-delete" data-toggle="collapse" data-target="#demo3">
-						<a href="#" title="" class="">
-							<div class="clearfix">
-								<div class="pull-left">	<i class="fa fa-address-card-o fa-fw" aria-hidden="true"></i>
-									<span>Sarafu Go.</span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-            <ul id="demo4"  class="ui-dropdownmenu-list list-unstyled clearfix collapse">
-              <li>
-                <a href="#">Budget</a>
-              </li>
-              <li>
-                <a href="#">Transaction request.</a>
-              </li>
-              <li>
-                <a href=" ../transactions/index.html">Sarafu Plan.</a>
-              </li>
-            </ul>
-					</li>
-					<li data-toggle="collapse" data-target="#demo4">
-						<a href="#" title="" class="">
-							<div class="clearfix">
-								<div class="pull-left"><i class="fa fa-link fa-fw" aria-hidden="true"></i>
-									<span>Sarafu Share</span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-						<ul id="demo4"  class="ui-dropdownmenu-list list-unstyled clearfix collapse">
-							<li>
-								<a href="#">SQL Jobs Full</a>
-							</li>
-							<li>
-								<a href="#">Error Job</a>
-							</li>
-							<li>
-								<a href="#">Running</a>
-							</li>
-						</ul>
-					</li>
-					<li data-toggle="collapse" data-target="#demo5">
-						<a href="#" title="" class="">
-							<div class="clearfix">
-								<div class="pull-left">	<i class="fa fa-external-link-square fa-fw" aria-hidden="true"></i>
-									<span>Sarafu Wallet</span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-						<ul id="demo5" class="ui-dropdownmenu-list list-unstyled clearfix collapse">
-							<li>
-								<a href="#">SQL Jobs Full</a>
-							</li>
-							<li>
-								<a href="#">Error Job</a>
-							</li>
-							<li>
-								<a href="#">Running</a>
-							</li>
-						</ul>
-					</li>
-					<li class="icon-delete" data-toggle="collapse" data-target="#demo6">
-						<a href="#">
-							<div class="clearfix">
-								<div class="pull-left">
-									<i class="fa fa-file-code-o fa-fw" aria-hidden="true"></i>
-									<span>Sarafu Pro</span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-					</li>
-					<li data-toggle="collapse" data-target="#demo7">
-						<a href="#" class="excel-tab-list">
-							<div class="clearfix">
-								<div class="pull-left">
-								<i class="fa fa-upload fa-fw" aria-hidden="true"></i>
-									<span>Sarafu Eve.</span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-						<ul id="demo7" class="ui-dropdownmenu-list list-unstyled clearfix collapse">
-							<li>
-								<a href="#">SQL Jobs Full</a>
-							</li>
-						</ul>
-					</li>
-					<li data-toggle="collapse" data-target="#demo8">
-						<a href="#" title="" class="">
-							<div class="clearfix">
-								<div class="pull-left">	<i class="fa fa-delicious fa-fw" aria-hidden="true"></i>
-									<span>Terms and Conditions </span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-						<ul id="demo8" class="ui-dropdownmenu-list list-unstyled clearfix collapse">
-							<li>
-								<a href="#">SQL Jobs Full</a>
-							</li>
-							<li>
-								<a href="#">Error Job</a>
-							</li>
-							<li>
-								<a href="#">Running</a>
-							</li>
-						</ul>
-					</li>
-					<!--
-					<li>
-						<a href="#" title="" class="">
-							<div class="clearfix">
-								<div class="pull-left">	<i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>
-									<span>More</span>
-								</div>
-								<div class="pull-right">	<i class="fa fa-angle-right text-right" aria-hidden="true"></i>
-								</div>
-							</div>
-						</a>
-					</li>
-					-->
-				</ul>
-				</div>
-				</div>
-			</div>
-		</header>
-		<!-- HEADER: END -->
-
-		<!-- MAIN: START -->
-		<main>
-			<section>
-					<div class="menu-search-block">
-						<div class="clearfix">
-							<div class="pull-left">
-								<h3>Project master</h3>
-							</div>
-						</div>
-					</div>
-					<div class="container-dashboard">
-						<div class="container-dashboard-inner">
-							<div class="">
-								<form class="form-inline">
-									<div class="clearfix">
-										<div class="pull-left">
-											<div class="form-group">
-												<label for="three">
-													Project Name
-												</label>
-												<input type="text" class="form-control" placeholder="Project Name" id="three">
-													<i class="fa fa-search search-box" aria-hidden="true"></i>
-											</div>
-											<div class="form-group">
-												<label for="four">
-													vertical Name
-												</label>
-												<input type="text" class="form-control" placeholder="vertical Name" id="four">
-													<i class="fa fa-search search-box" aria-hidden="true"></i>
-											</div>
-										</div>
-										<div class="pull-right">
-											<a href="#" class="btn btn-primary">	<i class="fa fa-check-circle fa-fw" aria-hidden="true"></i> Submit</a>
-										</div>
-									</div>
-								</form>
-								<div class="table-responsive">
-								<table class="table table-striped">
-									<thead>
-										<tr>
-											<th>Project Name</th>
-											<th>Vertical Name</th>
-											<th class="text-center">Status</th>
-											<th class="text-center">Edit</th>
-											<th class="text-center">delete</th>
-											<th class="text-center">checked</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><b>Mark</b></td>
-											<td>Otto</td>
-											<td class="table-text-status">
-												<a href="#">
-												<span class="issue-text"></span>
-												<span>Completed</span>
-												</a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
-											</td>
-										</tr>
-										<tr>
-											<td><b>Jacob</b></td>
-											<td>Thornton</td>
-											<td class="table-text-status">
-												<a href="#">
-												<span class="issue-text isuue-not-completed"></span>
-												<span>not completed</span>
-												</a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
-											</td>
-										</tr>
-										<tr>
-											<td><b>Larry</b></td>
-											<td>the Bird</td>
-											<td class="table-text-status">
-												<a href="#">
-												<span class="issue-text isuue-not-viewed"></span>
-												<span>not viewed</span>
-												</a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
-											</td>
-										</tr>
-										<tr>
-											<td><b>Larry</b></td>
-											<td>the Bird</td>
-											<td class="table-text-status">
-												<a href="#">
-												<span class="issue-text"></span>
-												<span>Completed</span>
-												</a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
-											</td>
-											<td>
-												<a href="#"><i class="fa fa-check-square-o" aria-hidden="true"></i></a>
-											</td>
-										</tr>
-										<tr>
-											<td><b>Larry</b></td>
-											<td>the Bird</td>
-											<td class="table-text-status">
-												<a href="#">
-												<span class="issue-text isuue-processing"></span>
-												<span>processing</span>
-												</a>
-											</td>
-											<td>
-												<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-											</td>
-											<td>
-												<i class="fa fa-trash-o" aria-hidden="true"></i>
-											</td>
-											<td>
-												<i class="fa fa-check-square-o" aria-hidden="true"></i>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-		</main>
-		<!-- MAIN: END -->
-
-		<!-- FOOTER: START -->
-		<footer>
-			<!-- BEGIN: FOOTER -->
-			<div class="footer-bottom text-center">
-				<p>	<a href="http://www.shriramvalue.com/" target="_blank">© Copyright Shriram Value Services.</a> 2018</p>
-			</div>
-			<!-- END: FOOTER -->
-		</footer>
-		<!-- FOOTER: END -->
-	</div>
-
-	<!-- CORE: JS -->
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/bootstrap.js"></script>
-	<script type="text/javascript" src="js/custom.js"></script>
-	<script type="text/javascript">
-	var width = $(window).width();
-		if ((width > 769)) {
-				$(".href-master > a").attr("href", "usermaster.html");
-				$(".ui-dropdownmenu-list  a").attr("href", "#");
-		} else {
-
-		}
-	</script>
-	<script type="text/javascript">
-		$(window).on('resize', function(){
-		  var win = $(this);
-		  if (win.width() <= 769) {
-				$(".href-master > a").attr("href", "#");
-				$(".ui-dropdownmenu-list  a").attr("href", "usermaster.html");
-		  }
-		});
-	</script>
-</body>
-</html>
+     
+        <p id="datetime"></p>
+       
+      
+      
+    </header>
+    
+    <section class="highlights">
+      
+      <article class="highlights__item">
+        
+        <img src="m.jpg" style="height: 160px;width: 160px;" alt="Profile Picture" class="highlights__img" />
+          <div class="highlights__text">
+            <p class="highlights__text--primary">Crowdfunds</p>
+            <p class="highlights__text--secondary"><a href=" ../transactions/index.html">Bill List</a></p>
+          </div>
+        
+        <div class="highlights__text">
+            <p class="highlights__text--primary commons__orange">Payment</p>
+            
+        </div>
+        
+        
+      </article>
+      
+      <article class="highlights__item">
+        
+        <img src="profile.jpg" alt="Profile Picture" class="highlights__img" style="height: 160px;width: 160px;"  />
+          <div class="highlights__text">
+            <p class="highlights__text--primary" id="name-display"></p>
+            <p class="highlights__text--secondary">Your account wallet address is: </p>
+          </div>
+        
+        <div class="highlights__text">
+            <p class="highlights__text--primary commons__green">Change Profile Settings</p>
+            
+        </div>
+        
+        
+      </article>
+      
+      <article class="highlights__item">
+        
+        <img src="Gold.jpg" alt="Profile Picture" class="highlights__img" style="height: 160px;width: 160px;" />
+          <div class="highlights__text">
+            <p class="highlights__text--primary">Transaction History</p>
+            <p class="highlights__text--secondary">Balance as per :<span >300</span></p>
+          </div>
+        
+        <div class="highlights__text">
+            <p class="highlights__text--primary commons__red">Access</p>
+            
+        </div>
+        
+        
+      </article>
+      
+    </section>
+    
+    <section class="overview">
+      <h3 class="heading-3">Sarafu coins wallet</h3>
+      
+      <article class="overview__item">
+        
+        <span class="overview__text overview__text--primary" id="number">300 </span>
+        <span class="overview__text overview__text--secondary"> $ 5000  </span>
+        
+      </article>
+      
+    </section>
+    
+    <section class="div-table">
+      <header class="div-table__header">
+        <h2 class="heading-2">Transaction receipt</h2>
+      </header>
+      
+      <main class="div-table__main">
+        
+        
+        <article class="div-table__row">
+          <img src="m.jpg" alt="Profile Picture" class="div-table__img" style="width:100px;height:80px;"/>
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--left">Kamau Kimani</p>
+            <p class="div-table__text--secondary div-table__text--left">Contractor working on building the office</p>
+          </div>
+          
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--center">200 S</p>
+            <p class="div-table__text--secondary div-table__text--center">Sarafu Amount</p>
+          </div> 
+          
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--center commons__green">Paid</p>
+            <p class="div-table__text--secondary div-table__text--center">Office repairs</p>
+          </div>
+          
+          <div class="div-table__actions">
+            <i class="material-icons">more_vert</i>
+          </div>
+        </article>
+        
+        <article class="div-table__row">
+          <img src=" ../m.jpg" alt="Profile Picture" class="div-table__img" style="width:100px;height:80px;"/>
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--left">OKoth Ken</p>
+            <p class="div-table__text--secondary div-table__text--left">Assets delivery</p>
+          </div>
+          
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--center">500 s</p>
+            <p class="div-table__text--secondary div-table__text--center">Sarafu Amount</p>
+          </div> 
+          
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--center commons__green">Paid</p>
+            <p class="div-table__text--secondary div-table__text--center">Delivery of laptops</p>
+          </div>
+          
+          <div class="div-table__actions">
+            <i class="material-icons">more_vert</i>
+          </div>
+        </article>
+        
+        <article class="div-table__row">
+          <img src="  ../k.jpg" alt="Profile Picture" class="div-table__img" style="width:100px;height:80px;"/>
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--left">Phiona Amanda</p>
+            <p class="div-table__text--secondary div-table__text--left">Delivery of meals</p>
+          </div>
+          
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--center">100 S</p>
+            <p class="div-table__text--secondary div-table__text--center">Sarafu Amount</p>
+          </div> 
+          
+          <div class="div-table__text">
+            <p class="div-table__text--primary div-table__text--center commons__green">Paid</p>
+            <p class="div-table__text--secondary div-table__text--center">Retailer</p>
+          </div>
+          
+          <div class="div-table__actions">
+            <i class="material-icons">more_vert</i>
+          </div>
+        </article>
+        
+      </main>
+      
+    </section>
+    
+  </main>
+  
+</div>
 <!-- partial -->
-  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js'></script><script  src="./script.js"></script>
+<script>
+  const name = localStorage.getItem("name");
+    const nameElement = document.getElementById("name-display");
 
+    if (name) {
+      nameElement.textContent = "Hello, " + name + "!";
+    } else {
+      nameElement.textContent = "No name entered.";
+    }
+
+</script>
+      <script>
+        const datetimeElement = document.getElementById("datetime");
+        const updateDateTime = () => {
+          const now = new Date();
+          const dateStr = now.toLocaleDateString();
+          const timeStr = now.toLocaleTimeString();
+          datetimeElement.textContent = `${dateStr} ${timeStr}`;
+        };
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+      </script>
+   <script>
+    let num = 300;
+    const intervalId = setInterval(() => {
+      const increment = Math.random() > 0.5 ? 1 : -1;
+      num += increment;
+      document.getElementById('number').textContent = num;
+    }, 1000);
+
+    function stopInterval() {
+      clearInterval(intervalId);
+    }
+  </script>
 </body>
 </html>

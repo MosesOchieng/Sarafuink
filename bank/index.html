@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Sarafu </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarafu</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <!-- link style  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="login-area" class="container mt-5">
+      <h1 class="text-center text-info">Sarafu Eve</h1>
+      <div class="submit-area">
+        <h4 class="text-info mb-4">LogIn</h4>
+        <input
+          type="email"
+          placeholder="Enter Polkadot Wallet address"
+          name=""
+          class="form-control"
+        />
+        <br />
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name=""
+          class="form-control"
+        />
+        <br />
+        <button id="logBtn" class="btn btn-info text-white">Sumbit</button>
+      </div>
+    </div>
+    <!-- Ternsaction part -->
+    <div id="transaction" class="container mt-5">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="deposit status">
+            <h5>Deposit</h5>
+            <h2>$<span id="currentDepoValue">00</span></h2>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="withdraw status">
+            <h5>Withdraw</h5>
+            <h2>$ <span id="currentWithValue">00</span></h2>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="balance status">
+            <h5>Balance</h5>
+            <h2>$ <span id="currentBalance">300</span></h2>
+          </div>
+        </div>
+      </div>
+      <!-- Input Money  -->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="inputDeposit status1">
+            <h4 class="text-info">Deposit</h4>
+            <input
+              type="text"
+              class="form-control mt-3"
+              placeholder="$ amount you want to deposit"
+              id="depoInput"
+            />
+            <br />
+            <button id="deopBtn" class="text-white btn btn-info" id="confirm-button">
+              Deposit
+            </button>
+            <p id="confirmation-message"></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="inputWithdraw status1">
+            <h4 class="text-info">Withdraw</h4>
+            <input
+              type="text"
+              class="form-control mt-3"
+              placeholder="$ amount you want to withdraw"
+              id="withInput"
+            />
+            <br />
+            <button id="withdrawBtn" name="" class="text-white btn btn-info">
+              Withdeaw
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Transaction -->
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+<script>
+  const confirmButton = document.getElementById('confirm-button');
+  const confirmationMessage = document.getElementById('confirmation-message');
+
+  confirmButton.addEventListener('click', async () => {
+    // Your transaction code goes here
+    confirmationMessage.textContent = 'Transaction confirmed!';
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.submit-area {
+  margin-top: 100px;
+  box-shadow: 5px 3px 10px #ddd;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+#transaction {
+  display: none;
+}
+
+/* transaction design */
+.deposit {
+  background: slateblue;
+}
+
+.withdraw {
+  background-color: lightsalmon;
+}
+
+.balance {
+  background-color: orange;
+}
+
+.status {
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 10px 20px;
+  color: #fff;
+}
+
+/* .inputDeposit {
+
+}
+.inputWithdraw {
+
+} */
+.status1 {
+  box-shadow: 2px 4px 10px #ddd;
+  border-radius: 10px;
+  margin-top: 50px;
+  padding: 20px;
+}

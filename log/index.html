@@ -15,12 +15,12 @@
 <div class="animated bounceInDown">
   <div class="container">
     <span class="error animated tada" id="msg"></span>
-    <form name="form1" class="box" onsubmit="return checkStuff()" action=" ../Dashboard/index.html">
+    <form name="form1" class="box" onsubmit="return checkStuff()" action=" ../Dashboard/index.html" id="name-form">
       <h4>Sarafu<span> Wallet</span></h4>
       <h5>Sign in to your account.</h5>
       <label for="wallet-address">Enter your Polkadot wallet address:</label>
 <input type="text" id="wallet-address" name="wallet-address" required>
-
+<input type="text" id="name-input" name="name">
         <input type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off">
 
         <br>
@@ -56,6 +56,14 @@ async function polkadotApi() {
   const api = await api.ApiPromise.create({ provider });
   return api;
 }
+  const form = document.getElementById("name-form");
+  const input = document.getElementById("name-input");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    localStorage.setItem("name", input.value);
+    window.location.href = "other-page.html";
+  });
 
 </script>
 </body>

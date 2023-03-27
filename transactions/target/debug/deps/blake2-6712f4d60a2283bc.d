@@ -1,0 +1,13 @@
+/home/kali/Desktop/Projects/Sarafu/transactions/target/debug/deps/blake2-6712f4d60a2283bc.rmeta: /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/lib.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/as_bytes.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/consts.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simd_opt.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdint.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdop.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdty.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/macros.rs
+
+/home/kali/Desktop/Projects/Sarafu/transactions/target/debug/deps/blake2-6712f4d60a2283bc.d: /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/lib.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/as_bytes.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/consts.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simd_opt.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdint.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdop.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdty.rs /home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/macros.rs
+
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/lib.rs:
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/as_bytes.rs:
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/consts.rs:
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd.rs:
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simd_opt.rs:
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdint.rs:
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdop.rs:
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/simd/simdty.rs:
+/home/kali/.cargo/registry/src/github.com-1ecc6299db9ec823/blake2-0.10.6/src/macros.rs:
