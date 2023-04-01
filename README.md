@@ -1,32 +1,34 @@
-Sarafu - A Financial Transaction Platform on the Kusama Substrate Network
+Sarafu: Decentralized Financial Platform
+Sarafu is a decentralized financial platform built on Rust and Substrate that enables businesses to control their end transactions by allowing money senders to have a pool of wallet addresses. Additionally, Sarafu allows investors to invest in startups with Sarafu tokens, and offers a line of products including Sarafu Go, Sarafu Invest, Sarafu Pro, and Sarafu Wallet. The platform is currently running on Kusama Substrate, and utilizes smart contracts built in Ink.
 
-Sarafu is a financial transaction platform built on Rust for the backend smart contracts and wallet addresses, with a combined front-end built on HTML, CSS, React, and Javascript that operates on the Kusama Substrate Network with Polkadot.js. The platform allows for peer-to-peer transactions and enables users to assign currency to specific objectives, ensuring that transactions only take place when the objective is met.
-Installation
- Deployef link
-To use Sarafu, you need to have Node.js and NPM installed on your computer. Once you have installed these dependencies, you can follow these steps to run Sarafu on your local machine:
+Features
+Decentralized financial platform built on Rust and Substrate.
+Enables businesses to control their end transactions by allowing money senders to have a pool of wallet addresses.
+Allows investors to invest in startups with Sarafu tokens.
+Offers a line of products including Sarafu Go, Sarafu Invest, Sarafu Pro, and Sarafu Wallet.
+Built using smart contracts in Ink.
+Currently running on Kusama Substrate.
+Products
+Sarafu Go
+Sarafu Go is a mobile app that allows users to easily send and receive Sarafu tokens on the go.
 
-    Clone the repository: git clone https://github.com/your-username/sarafu.git
-    Install dependencies: npm install
-    Start the development server: npm start
-    Open localhost:3000 in your browser to access Sarafu
+Sarafu Invest
+Sarafu Invest is a platform that enables investors to invest in startups using Sarafu tokens.
 
-Usage
-Use your polkadot wallet to login : https://sarafu.netlify.app/
-Sarafu is designed to be easy to use for both buyers and sellers. Here are the steps to follow:
-For Sellers
+Sarafu Pro
+Sarafu Pro is a professional platform for businesses to manage their end transactions using Sarafu tokens.
 
-    Create an objective: In Sarafu, you can create an objective by assigning a specific amount of currency to it. This ensures that the transaction only takes place when the objective is met.
-    Publish the objective: Once you have created the objective, you can publish it on the Sarafu platform for others to see.
-    Wait for buyers: After publishing the objective, you can wait for buyers to purchase it. The transaction will only take place when the objective is met.
+Sarafu Wallet
+Sarafu Wallet is a secure wallet for storing Sarafu tokens.
 
-For Buyers
+Getting Started
+To get started with Sarafu, you can visit our website and create an account. Once you have an account, you can use any of our products, including Sarafu Go, Sarafu Invest, Sarafu Pro, and Sarafu Wallet.
 
-    Browse objectives: On the Sarafu platform, you can browse available objectives and choose the one that best suits your needs.
-    Purchase the objective: Once you have chosen an objective, you can purchase it by sending the required amount of currency. The transaction will only take place when the objective is met.
+Contributing
+We welcome contributions to the Sarafu platform! To contribute, please fork our GitHub repository and submit a pull request with your changes.
 
-Sarafu allows users to create online joint accounts, which can be used for shared financial goals or expenses. Here's how it works:
-
-    Create a joint account: To create a joint account, you need to invite another user to join your account. Once they accept the invitation, you can both access the joint account and perform transactions.
+License
+Sarafu is licensed under the MIT License.
     Assign roles: In Sarafu, you can assign different roles to each user in the joint account, such as "primary user" or "secondary user." This helps to clarify each user's responsibilities and access levels.
     Set objectives: With Sarafu, you can also set objectives for your joint account, such as saving a specific amount of money or making a certain number of transactions. The joint account will only allow transactions to take place when the objectives are met.
     Monitor activity: Finally, Sarafu allows you to monitor the activity of your joint account, so you can keep track of transactions, balances, and progress towards objectives.
