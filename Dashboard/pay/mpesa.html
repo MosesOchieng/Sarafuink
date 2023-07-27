@@ -143,8 +143,8 @@
 
   // Replace 'YOUR_CONSUMER_KEY', 'YOUR_CONSUMER_SECRET', and 'YOUR_LIPA_NA_MPESA_PASSKEY'
   // with your actual M-Pesa Daraja credentials
-  const consumerKey = 'YOUR_CONSUMER_KEY';
-  const consumerSecret = 'YOUR_CONSUMER_SECRET';
+  const consumerKey = 'YxjURSx50gWaWYpt76G5ZIzB1V1c7wot6';
+  const consumerSecret = 'Yir3HPerFnhABhG34';
   const lipaNaMpesaOnlinePasskey = 'YOUR_LIPA_NA_MPESA_PASSKEY';
 
   // Function to send SMS using Africa's Talking API
@@ -160,7 +160,7 @@
 
       // Construct the request data for M-Pesa STK push
       const requestData = {
-        BusinessShortCode: 'YOUR_LIPA_NA_MPESA_SHORTCODE',
+        BusinessShortCode: '600992',
         Password: Buffer.from(`YOUR_LIPA_NA_MPESA_SHORTCODE${lipaNaMpesaOnlinePasskey}${transactionID}`).toString('base64'),
         Timestamp: new Date().toISOString().replace(/[^0-9]/g, '').slice(0, -3),
         TransactionType: 'CustomerPayBillOnline',

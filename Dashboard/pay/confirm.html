@@ -128,21 +128,49 @@
 
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script>
-    // JavaScript logic (same as previous example)
-
     // Function to toggle the visibility of the form container
     function toggleFormContainer() {
       const container = document.getElementById("tokenFormContainer");
       container.style.display = container.style.display === "none" ? "block" : "none";
     }
-
+  
     // Add event listener to the "Add Token" button to show/hide the form container
     document.getElementById("addTokenButton").addEventListener("click", toggleFormContainer);
-
+  
+    // Function to send SMS using Africa's Talking API
+    async function sendSMS(to, message) {
+      // Replace 'YOUR_USERNAME' and 'YOUR_API_KEY' with your actual Africa's Talking API credentials
+      const username = 'Sarafuink';
+      const apiKey = '0048ac87b548e0f1aff4988f26257fac43b3b62517486b9437fa2687f515033a';
+  
+      try {
+        // Make the HTTP POST request to send the SMS
+        const response = await axios.post(
+          'https://api.africastalking.com/version1/messaging',
+          {
+            to: to,
+            message: message,
+          },
+          {
+            auth: {
+              username: username,
+              password: apiKey,
+            },
+          }
+        );
+  
+        console.log('SMS sent:', response.data);
+        return response.data;
+      } catch (error) {
+        console.error('Error sending SMS:', error.response.data);
+        throw error;
+      }
+    }
+  
     // Function to handle form submission
-    document.getElementById("tokenForm").addEventListener("submit", function (event) {
+    document.getElementById("tokenForm").addEventListener("submit", async function (event) {
       event.preventDefault();
-
+  
       // Get the values from the form
       const ownerName = document.getElementById("ownerName").value;
       const accountNumber = document.getElementById("accountNumber").value;
@@ -150,57 +178,34 @@
       const amount = parseFloat(document.getElementById("amount").value);
       const description = document.getElementById("description").value;
       const expirationPeriod = parseInt(document.getElementById("expirationPeriod").value);
-
+  
       // Perform form validations (you may add your own validations here)
-
-      // Show a success message using JavaScript popup
-      window.alert("Amount requested successfully added!");
-
-      // Add the token details to the list (optional)
-      const tokenListItems = document.getElementById("tokenListItems");
-      const listItem = document.createElement("li");
-      listItem.innerHTML = `<strong>Account Number:</strong> ${accountNumber}<br><strong>Amount:</strong> ${amount}<br><strong>Description:</strong> ${description}<br><strong>Expiration Period:</strong> ${expirationPeriod} minutes<br><hr>`;
-      tokenListItems.appendChild(listItem);
-
-      // Reset the form and hide the container
-      document.getElementById("tokenForm").reset();
-      document.getElementById("tokenFormContainer").style.display = "none";
+  
+      // Trigger the SMS functionality with the "Account Number" value
+      try {
+        await sendSMS(accountNumber, `Hello, ${ownerName}. You have bought ${amount} tokens.`);
+  
+        // Show a success message using JavaScript popup
+        window.alert("Amount requested successfully added!");
+  
+        // Add the token details to the list (optional)
+        const tokenListItems = document.getElementById("tokenListItems");
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<strong>Account Number:</strong> ${accountNumber}<br><strong>Amount:</strong> ${amount}<br><strong>Description:</strong> ${description}<br><strong>Expiration Period:</strong> ${expirationPeriod} minutes<br><hr>`;
+        tokenListItems.appendChild(listItem);
+  
+        // Reset the form and hide the container
+        document.getElementById("tokenForm").reset();
+        document.getElementById("tokenFormContainer").style.display = "none";
+      } catch (error) {
+        // Handle any errors that occur during SMS sending
+        console.error('Error:', error.message);
+        alert('Error sending SMS. Please try again later.');
+      }
     });
-
-   // Function to send SMS using Africa's Talking API
-   async function sendSMS(to, message) {
-    // Replace 'YOUR_USERNAME' and 'YOUR_API_KEY' with your actual Africa's Talking API credentials
-    const username = 'Sarafuink';
-    const apiKey = '6ebfb3407aeea1c2d51c7399d98ed16af6f401d7a3614e5cbe643665f07cb5de';
-
-    try {
-      // Make the HTTP POST request to send the SMS
-      const response = await axios.post(
-        'https://api.africastalking.com/version1/messaging',
-        {
-          to: to,
-          message: message,
-        },
-        {
-          auth: {
-            username: username,
-            password: apiKey,
-          },
-        }
-      );
-
-      console.log('SMS sent:', response.data);
-      return response.data;
-    } catch (error) {
-      console.error('Error sending SMS:', error.response.data);
-      throw error;
-    }
-  }
-
-  // JavaScript logic (same as previous example)
-  // ...
-
+  
   </script>
+  
 </body>
 
 </html>
