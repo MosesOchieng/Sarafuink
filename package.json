@@ -1,0 +1,19 @@
+{
+  "name": "sarafuink",
+  "version": "1.0.0",
+  "description": "Sarafu: Decentralized Financial Platform Sarafu is a decentralized financial platform built on Rust and Substrate that enables businesses to control their end transactions by allowing money senders to have a pool of wallet addresses. Additionally, Sarafu allows investors to invest in startups with Sarafu tokens, and offers a line of products including Sarafu Go, Sarafu Invest, Sarafu Pro, and Sarafu Wallet. The platform is currently running on Kusama Substrate, and utilizes smart contracts built in Ink.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MosesOchieng/Sarafuink.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MosesOchieng/Sarafuink/issues"
+  },
+  "homepage": "https://github.com/MosesOchieng/Sarafuink#readme"
+}

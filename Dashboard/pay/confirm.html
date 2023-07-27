@@ -1,65 +1,206 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Payment Confirmation</title>
+  <!-- Your head content -->
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+  
+      h1 {
+        margin-bottom: 20px;
+      }
+  
+      #tokenFormContainer {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+     
+      }
+  
+      #tokenFormContainer h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+  
+      form label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+  
+      form input[type="text"],
+      form input[type="number"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+      }
+  
+      form button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+  
+      form button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+  
+      #tokenList {
+        background-color: #f7f7f7;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+  
+      #tokenList h2 {
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+  
+      #tokenListItems {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+  
+      #tokenListItems li {
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+  
+      hr {
+        margin: 10px 0;
+        border: none;
+        border-top: 1px solid #ccc;
+      }
+  </style>
 </head>
 
 <body>
-    <h1>Payment confirmed!</h1>
-    <p>Transaction ID: <span id="transaction-id"></span></p>
-    <p>Amount: <span id="amount"></span></p>
-    <p>Phone number: <span id="phone"></span></p>
-    <p>Reference: <span id="reference"></span></p>
-    <p>Description: <span id="description"></span></p>
-    <p>Status: <span id="status"></span></p>
-    <p>Receipt number: <span id="receipt-number"></span></p>
-    <p>Confirmation timestamp: <span id="confirmation-timestamp"></span></p>
+  <h1>Token Management</h1>
+  <button id="addTokenButton">Add Token</button>
 
-    <script>
-        // Get the transaction details from the URL query parameters
-        const urlSearchParams = new URLSearchParams(window.location.search);
-        const transactionId = urlSearchParams.get("transactionId");
-        const amount = urlSearchParams.get("amount");
-        const phone = urlSearchParams.get("phone");
-        const reference = urlSearchParams.get("reference");
-        const description = urlSearchParams.get("description");
+  <div id="tokenFormContainer">
+    <!-- Your form content -->
+    <h2>Add Token</h2>
+    <form id="tokenForm">
+      <label for="ownerName">Owner Name:</label>
+      <input type="text" id="ownerName" required>
 
-        // Get the payment status using the M-Pesa API
-        const apiUrl = "https://sandbox.safaricom.co.ke/mpesa/stkpushquery/v1/query";
-        const accessToken = "KG3WB4hddvpLeWSyrNdg7CNl61zm";
-        const timestamp = new Date().toISOString().replace(/[-:.Z]/g, "");
-        const password = btoa("ISafaricom999!*!" + "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919" + timestamp);
-        const request = {
-            BusinessShortCode: "174379",
-            Password: password,
-            Timestamp: timestamp,
-            CheckoutRequestID: transactionId
-        };
-        fetch(apiUrl, {
-            method: "POST",
-            headers: {
-                "Authorization": "Bearer " + accessToken,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(request)
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
+      <label for="accountNumber">Account Number:</label>
+      <input type="text" id="accountNumber" required>
 
-                // Update the page with the payment status
-                document.getElementById("transaction-id").textContent = transactionId;
-                document.getElementById("amount").textContent = amount;
-                document.getElementById("phone").textContent = phone;
-                document.getElementById("reference").textContent = reference;
-                document.getElementById("description").textContent = description;
-                document.getElementById("status").textContent = data.Body.ResultCode == 0 ? "Success" : "Failed";
-                document.getElementById("receipt-number").textContent = data.Body.MpesaReceiptNumber;
-                document.getElementById("confirmation-timestamp").textContent = data.Body.ConfirmationDate;
-            })
-            .catch(error => console.error(error));
-    </script>
+      <label for="whitelistedNumbers">Whitelisted Numbers (comma-separated):</label>
+      <input type="text" id="whitelistedNumbers" required>
+
+      <label for="amount">Amount to Buy Tokens:</label>
+      <input type="number" id="amount" required>
+
+      <label for="description">Description for the Amount:</label>
+      <input type="text" id="description" required>
+
+      <label for="expirationPeriod">Expiration Period (in minutes):</label>
+      <input type="number" id="expirationPeriod" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div id="tokenList">
+    <!-- Your token list content -->
+    <h2>Tokens:</h2>
+    <ul id="tokenListItems"></ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+    // JavaScript logic (same as previous example)
+
+    // Function to toggle the visibility of the form container
+    function toggleFormContainer() {
+      const container = document.getElementById("tokenFormContainer");
+      container.style.display = container.style.display === "none" ? "block" : "none";
+    }
+
+    // Add event listener to the "Add Token" button to show/hide the form container
+    document.getElementById("addTokenButton").addEventListener("click", toggleFormContainer);
+
+    // Function to handle form submission
+    document.getElementById("tokenForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      // Get the values from the form
+      const ownerName = document.getElementById("ownerName").value;
+      const accountNumber = document.getElementById("accountNumber").value;
+      const whitelistedNumbers = document.getElementById("whitelistedNumbers").value.split(",");
+      const amount = parseFloat(document.getElementById("amount").value);
+      const description = document.getElementById("description").value;
+      const expirationPeriod = parseInt(document.getElementById("expirationPeriod").value);
+
+      // Perform form validations (you may add your own validations here)
+
+      // Show a success message using JavaScript popup
+      window.alert("Amount requested successfully added!");
+
+      // Add the token details to the list (optional)
+      const tokenListItems = document.getElementById("tokenListItems");
+      const listItem = document.createElement("li");
+      listItem.innerHTML = `<strong>Account Number:</strong> ${accountNumber}<br><strong>Amount:</strong> ${amount}<br><strong>Description:</strong> ${description}<br><strong>Expiration Period:</strong> ${expirationPeriod} minutes<br><hr>`;
+      tokenListItems.appendChild(listItem);
+
+      // Reset the form and hide the container
+      document.getElementById("tokenForm").reset();
+      document.getElementById("tokenFormContainer").style.display = "none";
+    });
+
+   // Function to send SMS using Africa's Talking API
+   async function sendSMS(to, message) {
+    // Replace 'YOUR_USERNAME' and 'YOUR_API_KEY' with your actual Africa's Talking API credentials
+    const username = 'Sarafuink';
+    const apiKey = '6ebfb3407aeea1c2d51c7399d98ed16af6f401d7a3614e5cbe643665f07cb5de';
+
+    try {
+      // Make the HTTP POST request to send the SMS
+      const response = await axios.post(
+        'https://api.africastalking.com/version1/messaging',
+        {
+          to: to,
+          message: message,
+        },
+        {
+          auth: {
+            username: username,
+            password: apiKey,
+          },
+        }
+      );
+
+      console.log('SMS sent:', response.data);
+      return response.data;
+    } catch (error) {
+      console.error('Error sending SMS:', error.response.data);
+      throw error;
+    }
+  }
+
+  // JavaScript logic (same as previous example)
+  // ...
+
+  </script>
 </body>
 
 </html>
